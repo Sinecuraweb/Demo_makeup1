@@ -1,0 +1,276 @@
+@import "bourbon"
+@import "vars"
+
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/superfish/dist/css/superfish"
+@import "app/libs/font-awesome/scss/font-awesome"
+@import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
+@import "app/libs/magnific-popup/dist/magnific-popup"
+@import "app/css/magnific_custom"
+
+
+
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.mm-menu
+	&.mm-offcanvas
+		z-index: 4
+	.fa
+		display: none
+
+.sect-services
+	background-color: #efefef
+
+
+.sect-universal
+	background-color: #efefef
+	padding: 60px 0
+	background-size: cover
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: .85
+
+	h2
+		margin-bottom: 45px
+
+		font-size: em(40px)
+		line-height: em(18px)
+
+
+
+.sect-news
+	background-image: url(../img/news-bg.jpg)
+	color: #fff
+
+
+	&::before
+
+		background-color: $main-color
+
+
+.new-item
+	.new-item-text
+		margin-bottom: 30px
+
+	background-color: #efefef
+	padding: 1px 1px 32px 1px
+	color: #111
+	text-align: center
+	margin: 20px 20px
+	&:hover
+		.new-item-img
+		&::before
+			opacity: .7
+		.fa
+			opacity: .4
+
+	&-img
+		min-height: 180px
+		background-size: cover
+		display: block
+		position: relative
+		.fa
+			font-size: 30px
+			color: #fff
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: -10px
+			margin-left: -10px
+			opacity: 0
+			transition: all 1s ease
+
+
+		&::before
+			position: absolute
+			content: ''
+			height: 100%
+			width: 100%
+			top: 0
+			left: 0
+			background-color: $main-color
+			opacity: 0
+			transition: all .5s ease
+
+	h4,p
+		padding: 0 20px
+	p
+		font-size: em(14px)
+
+		margin-top: 0
+	h4
+		margin-bottom: 12px
+
+.link-item
+	display: block
+	padding: 14px
+	border: $accent-color 4px solid
+	background-color: #fff
+	color: #111
+	text-decoration: none
+	margin-top: 30px
+	&::after
+		display: block
+		content: ''
+		clear: both
+
+
+	.h4
+		text-decoration: underline
+		line-height: 22px
+		font-size: 16px
+		display: block
+	&:hover
+		text-decoration: none
+
+
+
+	img
+		width: 34px
+		height: auto
+		float: left
+		margin-right: 10px
+
+
+//FOOTER
+
+.main-foot
+	background-color: #0E0B13
+	padding: 70px 0
+	color: #fff
+	.top-button
+		margin-top: 15px
+		margin-bottom: 40px
+	.logo
+		opacity: .4
+	.footer-about
+		opacity: .3
+		font-size: em(13px)
+		margin-top: 28px
+		margin-bottom: 50px
+		color: #fff
+
+	.top-panel-box
+		margin-bottom: 25px
+		.menu-type-2
+			li
+				margin-bottom: 8px
+
+	.top-panel-box
+		li
+			max-width: 100%
+			opacity: .6
+			margin-bottom: 18px
+			font-size: em(13px)
+			display: block
+			transition: all .5s ease
+			&:hover
+				opacity: .8
+				.fa
+					opacity: .8
+					transition: all .5s ease
+			a
+				color: #fff
+				text-decoration: underline
+
+
+
+				.fa
+					top: 3px
+			.fa
+				opacity: .4
+
+.developer
+	margin-top: 80px
+	margin-bottom: 30px
+	a
+		display: inline-block
+		width: 120px
+		color: #fff
+		font-size: 14px
+		text-align: left
+
+		&:hover, &:focus
+			text-decoration: none
+
+		img,span
+			diplay: block
+
+form
+	background: white
+	position: relative
+	max-width: 500px
+	margin: 20px auto
+	width: auto
+	padding: 20px
+.popup-form
+	position: relative
+	h3
+		text-align: center
+	label,input
+		display: block
+		width: 100%
+	label
+		margin-bottom: 12px
+
+
+
+		span
+			font-size: em(15px)
+			color: #999
+	.button
+		margin-top: 20px
+		margin-bottom: 10px
+	input
+		border: $accent-color 4px solid
+		padding: 6px 17px
+	.success
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		background-color: #fff
+		font-family: "RobotoCondensedBold", sans-serif
+		font-size: 25px
+
+		align-items: center
+		text-transform: uppercase
+
+
+
+//ALWAYS END
+@import "media"
